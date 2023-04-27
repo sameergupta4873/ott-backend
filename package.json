@@ -1,0 +1,41 @@
+{
+  "name": "nodejs-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sameergupta4873/nodejs-typescript-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sameergupta4873/nodejs-typescript-template/issues"
+  },
+  "homepage": "https://github.com/sameergupta4873/nodejs-typescript-template#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.16.1",
+    "nodemon": "^2.0.22",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ]
+}
